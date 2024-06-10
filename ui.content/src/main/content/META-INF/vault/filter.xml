@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/ttnBootcamp" mode="merge"/>
+    <filter root="/content/ttnBootcamp" mode="merge"/>
+    <filter root="/content/dam/ttnBootcamp" mode="merge">
+        <exclude pattern="/content/dam/ttnBootcamp(/.*)?"/>
+        <include pattern="/content/dam/ttnBootcamp/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/ttnBootcamp/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/ttnBootcamp" mode="merge"/>
+</workspaceFilter>

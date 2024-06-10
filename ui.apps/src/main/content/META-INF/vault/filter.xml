@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/ttnBootcamp/clientlibs"/>
+    <filter root="/apps/ttnBootcamp/components"/>
+    <filter root="/apps/ttnBootcamp/i18n"/>
+    <filter root="/apps/sling" />
+    <filter root="/apps/msm/ttnBootcamp_blueprint" mode="merge"/>
+</workspaceFilter>

@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/ttnBootcamp",
+        "create path (nt:unstructured) /content/dam/ttnBootcamp/jcr:content",
+        "set properties on /content/dam/ttnBootcamp/jcr:content\n  set cq:conf{String} to /conf/ttnBootcamp\n  set jcr:title{String} to \"TTN Bootcamp\"\nend"
+    ]
+}
