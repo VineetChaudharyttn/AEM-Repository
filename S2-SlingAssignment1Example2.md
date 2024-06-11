@@ -1,10 +1,10 @@
-1. How Sling will Call the Script on the basis of url.
+Qestion 1: Example 2(a): How Sling will Call the Script on the basis of url.
 	
 	->Sling splits url for different necessary information from URL. Then Sling repository(JCR) looks for the request resource.
 	Sling breaks a url in different parts like protocal, host, content path, selector(s) etc, and from the content path and extension sling look for the resource, if resource is not present at the 
 	content path sling looks for the resourceType to serve the request.
 	
-2. Have a page /content/SlingProject/English/test.html which has resourceType    SlingProject/components/page/basepage
+Qestion 1: Example 2(b): Have a page /content/SlingProject/English/test.html which has resourceType    SlingProject/components/page/basepage
 	
 	
     step 1 -> Go to the http://localhost:8080/bin/browser.html/ and select conetnet directory from the structure. then click on add icon (+) botton in the down left corner.
@@ -34,7 +34,7 @@
 
 
 
-3. We have 4 script files at “SlingProject/components/page/basepage”:
+ Qestion 1: Example 2(c): We have 4 script files at “SlingProject/components/page/basepage”:
 
 	basepage.html.jsp
 

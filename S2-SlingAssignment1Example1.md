@@ -1,4 +1,4 @@
-Taking up a list of potential scripts for a request to a resource whose sling:resource type is example/sample and the request selectors are "print.a4" and the request extension is "html". What would be the order in which these scripts would be called ?
+Qestion 1: Example 1: Taking up a list of potential scripts for a request to a resource whose sling:resource type is example/sample and the request selectors are "print.a4" and the request extension is "html". What would be the order in which these scripts would be called ?
 
 (0) GET.jsp
 
@@ -12,7 +12,7 @@ Taking up a list of potential scripts for a request to a resource whose sling:re
 
 (5) print/a4.jsp
 
-(6) print/a4/html.jsp 
+(6) print/a4/html.jsp
 
 (7) print/a4.html.jsp
 
