@@ -47,6 +47,9 @@ public class HelloWorldModel {
 
     private String message;
 
+    @ValueMapValue
+    private String text;
+
     @PostConstruct
     protected void init() {
         PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
@@ -63,4 +66,7 @@ public class HelloWorldModel {
         return message;
     }
 
+    public String getText() {
+        return text;
+    }
 }
