@@ -9,7 +9,7 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Modified;
 import org.osgi.service.metatype.annotations.Designate;
 
-@Component(service = MySimpleService.class, immediate = true)
+@Component(service = MySimpleService.class, immediate = true,name = "serviceA")
 @Designate(ocd = BootcampOSGiConfiguration.class)
 public class MySimpleServiceImpl implements MySimpleService {
 

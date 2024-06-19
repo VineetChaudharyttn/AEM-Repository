@@ -23,4 +23,19 @@
         <p class="cmp-helloworld__item-label">Model message:</p>
         <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
     </div>
+    <div class="cmp-helloworld__item" data-sly-use.model1="com.ttn.bootcamp.core.models.DisplayValueBootcampModel">
+        <p class="cmp-helloworld__item-label">Model message:</p>
+        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model1.message}</pre>
+        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model1.InjectedValue}</pre>
+        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model1.OptionalTest}</pre>
+        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model1.RequiredTest}</pre>
+    </div>
+
+
+    <!--<div class="cmp-helloworld__item" data-sly-use.bootcampModel="com.ttn.bootcamp.core.models.DisplayValueBootcampModel">
+        <p class="cmp-helloworld__item-label">Bootcamp Model message:</p>
+        <p>${bootcampModel.injectedValue}</p>
+        <p>${bootcampModel.message}</p>
+        <p>${bootcampModel.properties.injectedValue}</p>
+    </div>-->
 </div>

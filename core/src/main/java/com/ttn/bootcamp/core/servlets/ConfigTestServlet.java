@@ -14,6 +14,7 @@ import java.io.IOException;
 
 @Component(service = { Servlet.class }, property = {
         "sling.servlet.methods="+HttpConstants.METHOD_GET,
+        "sling.servlet.methods="+HttpConstants.METHOD_POST,
         "sling.servlet.paths=/bin/bootcamp/configtest",
         "sling.servlet.extension=html",
 
@@ -28,4 +29,12 @@ public class ConfigTestServlet extends SlingAllMethodsServlet {
         response.setContentType("text/html");
         response.getWriter().write("<h1>This is my first servlet.</h1>\n With Configured url"+ mySimpleService.fetchURL());
     }
+
+    @Override
+    protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        response.getWriter().write("<h1>This is my first servlet.</h1>\n With Configured url"+ mySimpleService.fetchURL());
+    }
+
+
 }
