@@ -1,0 +1,26 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='ttnBootcamp.cafe'}"/>
+    <sly data-sly-call="${clientlib.js @ categories='ttnBootcamp.cafe'}"/>
+</sly>
+<h3>${properties.title}</h3>
+
+<div class="container">
+    <div data-sly-use.orderhistoryModel="com.ttn.bootcamp.core.models.OrderHistoryModel">
+        <h3  data-sly-test="${orderhistoryModel.state == 'Complete' && !properties.showStateChangeButton}">Your Order is ready, Please collect your order from counter</h3>
+        <table style="border:1px solid black;text-align: left;padding: 8px;">
+            <tr>
+                <th style="border:1px solid black;">Item</th>
+                <th style="border:1px solid black;">Quantity</th>
+                <th style="border:1px solid black;">Total Bill</th>
+                <th style="border:1px solid black;">State</th>
+            </tr>
+            <tr style="border:1px solid black;">
+                <td style="border:1px solid black;">${orderhistoryModel.item}</td>
+                <td style="border:1px solid black;">${orderhistoryModel.quantity}</td>
+                <td style="border:1px solid black;">${orderhistoryModel.bill}</td>
+                <td style="border:1px solid black;">${orderhistoryModel.state}</td>
+                <td style="border:1px solid black;" data-sly-test="${orderhistoryModel.state == 'Pending' && properties.showStateChangeButton}"><input type="submit" value="Complete" onclick="updateOrder('${orderhistoryModel.item  @context = 'text'}',${orderhistoryModel.quantity  @context = 'text'},${orderhistoryModel.price  @context = 'text'},'${orderhistoryModel.state  @context = 'text'}')"></td>
+            </tr>
+        </table>
+    </div>
+</div>

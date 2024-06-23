@@ -1,0 +1,10 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='ttnBootcamp.horizontalnavbar'}"/>
+</sly>
+
+<ul data-sly-list="${properties.subject}">
+    <li><a href="http://localhost:4502/content/ttnBootcamp/fr/${item}.html">${item.toString.toUpperCase}</a></li>
+</ul>
+<ul data-sly-test="${!properties.subject}">
+    <li>Please configure the pages</li>
+</ul>
