@@ -1,0 +1,10 @@
+<div class="p-3" data-sly-use.latestFeedsModel="com.ttn.bootcamp.core.models.LatestThreeFeedModel">
+    <h4 data-sly-test="${latestFeedsModel.latestThreeFeed}" class="font-italic">Archives</h4>
+    <ol class="list-unstyled mb-0" data-sly-list="${latestFeedsModel.latestThreeFeed}">
+    <sly  data-sly-use.formatter="${'dateformatter.js' @ date=item.date.time, mask='dd-MMMM yyyy'}">
+        <li><a data-sly-test="${latestFeedsModel.latestThreeFeed}" href="${item.link @extension='html'}">${formatter.formattedDate}</a></li>
+    </sly>
+    </ol>
+</div>
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${template.placeholder @ isEmpty=!latestFeedsModel.latestThreeFeed}"/>

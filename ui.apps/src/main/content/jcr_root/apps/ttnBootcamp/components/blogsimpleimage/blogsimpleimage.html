@@ -1,0 +1,5 @@
+<div data-sly-test="${properties.fileReference}">
+<img src="${properties.fileReference}" class="banner" alt="Bootcamp Banner">
+    </div>
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${template.placeholder @ isEmpty=!properties.fileReference}"/>

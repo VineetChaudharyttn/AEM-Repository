@@ -1,0 +1,20 @@
+<div data-sly-test="${properties.copyrighttext}">
+    <p class="text-center">
+    <a href="javascript:window.scrollTo(0,0);">Back to top</a>
+</p>
+<hr/>
+<footer class="blog-footer text-center">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 ">
+            <div class="footer__block">
+                <a target="" href="homepage.html#" aria-label="PwC office locations">HomePage</a></t>
+                <a target="" href="blogs.html#" aria-label="PwC office locations">Blogs</a>
+            </div>
+        </div>
+    </div>
+    <p>${properties.copyrighttext}</p>
+</footer>
+</div>
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+         data-sly-call="${template.placeholder @ isEmpty=!properties.copyrighttext}"/>
+</sly>

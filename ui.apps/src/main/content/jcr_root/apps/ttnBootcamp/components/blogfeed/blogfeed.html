@@ -1,0 +1,26 @@
+<sly data-sly-use.latestFeedsModel="com.ttn.bootcamp.core.models.LatestThreeFeedModel">
+    <div class="row mb-2 mt-2" data-sly-list="${latestFeedsModel.latestThreeFeed}">
+        <sly  data-sly-use.formatter="${'dateformatter.js' @ date=item.date.time, mask='MMM dd'}">
+            <div class="col-md-4" data-sly-test="${item.blogheading}">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-400">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <img class="card-img-right flex-auto d-none d-lg-block" src="${item.bloglogo}"
+                             alt="Card image cap">
+                        <strong class="d-inline-block mb-2 text-success">${item.blogheading}</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="${item.link @extension='html'}">${item.blogtitle}</a>
+                        </h3>
+                        <div class="mb-1 text-muted">
+                            ${formatter.formattedDate}
+                        </div>
+                        <p class="card-text mb-auto">${item.detailedblog}</p>
+                        <a href="${item.link @extension='html'}">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+        </sly>
+    </div>
+</sly>
+    <sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+         data-sly-call="${template.placeholder @ isEmpty=!latestFeedsModel.latestThreeFeed}"/>
+</sly>

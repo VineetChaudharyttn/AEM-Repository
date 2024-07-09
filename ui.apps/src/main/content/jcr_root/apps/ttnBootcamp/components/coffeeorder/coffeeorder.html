@@ -5,6 +5,7 @@
 <h3>Order Coffee</h3>
 
 <div class="container">
+    <form action="/content/ttnBootcamp/fr/orderpage/jcr:content/root/responsivegrid/coffeeorder" method="POST" enctype="multipart/form-data">
         <select name="coffee" id="coffee" onchange="updateTotalPrice();">
             <option>Please Select</option>
             <option value='{"name":"Espresso","price":10}'>Espresso (Rs.10)</option>
@@ -12,10 +13,12 @@
             <option value='{"name":"Cold Brew","price":40}'>Cold Brew (Rs.40)</option>
             <option value='{"name":"Cappuccino","price":10}'>Cappuccino (Rs.10)</option>
             <option value='{"name":"Mocha","price":20}'>Mocha (Rs.20)</option>
+            <input type="hidden" name="*@TypeHint" value="nt:unstructured" />
             <option value='{"name":"Iced Coffees","price":50}'>Iced Coffees (Rs.50)</option>
         </select>
         <label for="quantity">Quantity</label>
         <input type="text" id="quantity" name="quantity" onkeyup="updateTotalPrice();" placeholder="Quantity">
         <h2 class="modal-box">Bill Amount: 0</h2>
-        <input onclick="onSubmit()" type="submit" value="Submit">
+        <input type="submit" value="Submit">
+    </form>
 </div>
